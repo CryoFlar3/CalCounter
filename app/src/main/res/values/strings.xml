@@ -13,5 +13,6 @@
     <string name="cal_text">Cal.</string>
     <string name="food_items_num">Food Items:</string>
     <string name="title_activity_display_foods">DisplayFoodsActivity</string>
+    <string name="title_activity_food_item_details">FoodItemDetailsActivity</string>
 
 </resources>

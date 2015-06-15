@@ -47,4 +47,12 @@
 
     </LinearLayout>
 
+    <ListView
+        android:id="@+id/list"
+        android:layout_below="@+id/linearLayout"
+        android:dividerHeight="2dp"
+        android:divider="#212121"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ListView>
+
 </RelativeLayout>

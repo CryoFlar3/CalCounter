@@ -20,6 +20,10 @@
             android:name=".DisplayFoodsActivity"
             android:label="@string/title_activity_display_foods" >
         </activity>
+        <activity
+            android:name=".FoodItemDetailsActivity"
+            android:label="@string/title_activity_food_item_details" >
+        </activity>
     </application>
 
 </manifest>

@@ -97,7 +97,7 @@ public class FoodItemDetailsActivity extends ActionBarActivity {
 
             AlertDialog.Builder alert = new AlertDialog.Builder(FoodItemDetailsActivity.this);
             alert.setTitle("Delete?");
-            alert.setMessage("Are you sure you want to delete this item?"):
+            alert.setMessage("Are you sure you want to delete this item?");
             alert.setNegativeButton("No", null);
             alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                 @Override
@@ -105,7 +105,7 @@ public class FoodItemDetailsActivity extends ActionBarActivity {
                     DatabaseHandler dba = new DatabaseHandler(getApplicationContext());
                     dba.deleteFood(foodId);
 
-                    Toast.makeText(getApplicationContext(), "Food itemwas deleted", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Food item was deleted.", Toast.LENGTH_LONG).show();
                     startActivity(new Intent(FoodItemDetailsActivity.this, DisplayFoodsActivity.class));
 
                     //remove this activity from stack

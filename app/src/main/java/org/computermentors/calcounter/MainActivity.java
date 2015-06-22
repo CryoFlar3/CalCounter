@@ -1,5 +1,7 @@
 package org.computermentors.calcounter;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -8,7 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import data.DatabaseHandler;
 import model.Food;
@@ -46,12 +47,23 @@ public class MainActivity extends ActionBarActivity {
         String name = foodName.getText().toString().trim();
         String calString = foodCals.getText().toString().trim();
 
-        int cals = Integer.parseInt(calString);
-
         if (name.equals("") || calString.equals("")){
 
-            Toast.makeText(getApplicationContext(), "No empty fields allowed", Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(), "No empty fields allowed", Toast.LENGTH_LONG).show();
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Oops!");
+            builder.setMessage("No empty fields allowed");
+            builder.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
         } else {
+
+            int cals = Integer.parseInt(calString);
 
             food.setFoodName(name);
             food.setCalories(cals);
